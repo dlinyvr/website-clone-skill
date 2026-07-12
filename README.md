@@ -7,7 +7,7 @@ and Vercel.
 ## Install
 
 ```bash
-npx skills add dlinyvr/website-clone-skill
+claude install dlinyvr/website-clone-skill
 ```
 
 That's it. The skill walks you through everything else.
