@@ -6,11 +6,30 @@ and Vercel.
 
 ## Install
 
+This is a skill for **[Claude Code](https://claude.ai/code)** — Anthropic's AI coding tool that runs in your terminal.
+
+**Step 1 — Get Claude Code** (if you don't have it yet):
+
+Open your terminal and paste the command below, then press Enter:
+- **Mac:** press `Cmd + Space`, type "Terminal", hit Enter
+- **Windows:** press `Win + R`, type "cmd", hit Enter (or open PowerShell from the Start menu)
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+After the installation, type `claude` and hit Enter to start it.
+
+**Step 2 — Install this skill** (run this inside Claude Code, or in your terminal):
 ```bash
 claude install dlinyvr/website-clone-skill
 ```
 
-That's it. The skill walks you through everything else.
+**Step 3 — Use it:**
+```
+/website-clone-skill https://example.com
+```
+
+That's it. The skill walks you through everything else from there.
 
 ---
 
