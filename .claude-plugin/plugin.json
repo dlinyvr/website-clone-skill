@@ -1,0 +1,19 @@
+{
+  "name": "website-clone-skill",
+  "version": "1.1.0",
+  "description": "Clone any website you have the right to copy into a static Astro site — free, no API keys, deploys to your own GitHub + Vercel",
+  "author": {
+    "name": "David Lin"
+  },
+  "homepage": "https://github.com/dlinyvr/website-clone-skill",
+  "repository": "https://github.com/dlinyvr/website-clone-skill",
+  "license": "MIT",
+  "keywords": [
+    "website-clone",
+    "astro",
+    "static-site",
+    "web-scraping",
+    "vercel",
+    "deployment"
+  ]
+}

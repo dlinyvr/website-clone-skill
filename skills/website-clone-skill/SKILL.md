@@ -49,28 +49,45 @@ without permission.
 
 ## Step 1 — Preflight: dependencies + skills
 
-### 1a — Check the `frontend-design` skill (first-time users)
+### 1a — Install the `frontend-design` skill (required)
 
-This workflow calls `/frontend-design` in Step 5 to generate the Astro UI. Before
-proceeding, verify the skill is installed:
+This skill depends on **`/frontend-design`** — an official free plugin from Anthropic that generates
+distinctive, production-quality UI from design tokens. Without it, the rebuilt site will look generic.
+You can read exactly what it does here: https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design
+
+Check if it's already installed:
 
 ```bash
 ls ~/.claude/skills/frontend-design/SKILL.md 2>/dev/null && echo "ok" || echo "MISSING"
 ```
 
-If **MISSING**, walk the user through installing it:
+If **already installed** → continue to Step 1b.
 
-> The `/frontend-design` skill isn't installed yet. It's a free official plugin from Anthropic.
->
-> **Run this right here in the chat** (the `!` prefix runs a command without leaving this session):
->
-> ```
-> ! claude install anthropics/claude-code/plugins/frontend-design
-> ```
->
-> Just type that line and hit Enter. Once it completes you'll see "Plugin installed: frontend-design" — then we'll continue automatically.
+If **MISSING** → install it automatically now:
 
-Do **not** proceed to Step 2 until the skill is confirmed installed.
+```bash
+claude install anthropics/claude-code/plugins/frontend-design
+```
+
+Tell the user:
+
+> Installing the **frontend-design** plugin — this is a free official plugin from Anthropic that
+> handles the visual design of your rebuilt site. It reads the colors, fonts, and layout captured
+> from your site and turns them into a polished, production-ready result instead of a generic template.
+> More info: https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design
+
+Run the install command, wait for confirmation, then verify:
+
+```bash
+ls ~/.claude/skills/frontend-design/SKILL.md 2>/dev/null && echo "ok" || echo "STILL MISSING"
+```
+
+If still missing after install, stop and ask the user to run:
+```
+! claude install anthropics/claude-code/plugins/frontend-design
+```
+
+Do **not** proceed to Step 2 until confirmed installed.
 
 ### 1b — Check system dependencies
 
